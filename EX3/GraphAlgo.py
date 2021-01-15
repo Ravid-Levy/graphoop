@@ -1,4 +1,4 @@
-from GraphAlgoInterface import GraphAlgoInterface
+from src.GraphAlgoInterface import GraphAlgoInterface
 from DiGraph import DiGraph
 from src.GraphInterface import GraphInterface
 import json
