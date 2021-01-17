@@ -1,6 +1,6 @@
 from GraphAlgoInterface import GraphAlgoInterface
 from DiGraph import DiGraph
-from src.GraphInterface import GraphInterface
+from GraphInterface import GraphInterface
 import json
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -67,6 +67,7 @@ class GraphAlgo(GraphAlgoInterface):
                     tmp2 = i
                     break
         list.reverse()
+        list.append(id2)
         return (distancedict[id2], list)
 
     def SCCUtil(self, u):

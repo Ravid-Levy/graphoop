@@ -1,18 +1,7 @@
 from DiGraph import DiGraph
 from GraphAlgo import GraphAlgo
-
-
-def check():
-    check0()
-    check1()
-    check2()
-
-
+import os
 def check0():
-    """
-    This function tests the naming (main methods of the DiGraph class, as defined in GraphInterface.
-    :return:
-    """
     h = DiGraph()  # creates an empty directed graph
     for n in range(4):
         h.add_node(n)
@@ -33,12 +22,8 @@ def check0():
 
 
 def check1():
-    """
-       This function tests the naming (main methods of the GraphAlgo class, as defined in GraphAlgoInterface.
-    :return:
-    """
     g_algo = GraphAlgo()  # init an empty graph - for the GraphAlgo
-    file = "../data/T0.json"
+    file = os.path.dirname(os.path.realpath(__file__))+"/data/A0"
     g_algo.load_from_json(file)  # init a GraphAlgo from a json file
     print(g_algo.connected_components())
     print(g_algo.shortest_path(0, 3))
@@ -48,11 +33,8 @@ def check1():
 
 
 def check2():
-    """ This function tests the naming, basic testing over A5 json file.
-      :return:
-      """
     Galgor = GraphAlgo()
-    file = '../data/A5'
+    file = os.path.dirname(os.path.realpath(__file__))+"/data/A5"
     Galgor.load_from_json(file)
     Galgor.get_graph().remove_edge(13, 14)
     Galgor.save_to_json(file + "_edited")
@@ -70,4 +52,6 @@ def check2():
 
 
 if __name__ == '__main__':
-    check()
+    check0()
+    check1()
+    check2()
