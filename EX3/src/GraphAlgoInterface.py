@@ -1,5 +1,10 @@
 from typing import List
+<<<<<<< HEAD
 from GraphInterface import GraphInterface
+=======
+
+from src.GraphInterface import GraphInterface
+>>>>>>> main
 
 
 class GraphAlgoInterface:
